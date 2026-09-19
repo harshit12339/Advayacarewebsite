@@ -1,0 +1,254 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Jost:wght@300;400;500&display=swap">
+  <style>
+    body { margin: 0; background: #0C0B08; }
+    a { color: #C9A227; text-decoration: none; }
+    a:hover { color: #E0C878; }
+  </style>
+</helmet>
+
+<div style="width: 1440px; background: #0C0B08; font-family: Jost, 'Helvetica Neue', sans-serif; color: #F4EFE4;">
+
+  <!-- header -->
+  <div style="display: flex; justify-content: space-between; align-items: center; padding: 22px 64px; border-bottom: 1px solid #221E15;">
+    <div style="display: flex; align-items: baseline; gap: 12px;">
+      <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 34px; color: #C9A227;">A</span>
+      <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; letter-spacing: 0.22em; text-transform: uppercase;">Advaya Care</span>
+    </div>
+    <div style="display: flex; gap: 36px; font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #CFC7B6;">
+      <span style="color: #C9A227; border-bottom: 1px solid #C9A227; padding-bottom: 3px;">Shop</span>
+      <span>Face</span><span>Body</span><span>Hair</span><span>Pet Care</span><span>Rituals</span><span>Journal</span>
+    </div>
+    <div style="display: flex; gap: 20px; align-items: center; color: #CFC7B6;">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8" r="4"/><path d="M5 21c0-3.9 3.1-7 7-7s7 3.1 7 7"/></svg>
+      <div style="display: flex; align-items: center; gap: 7px;">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M6 8h12l-1.2 12H7.2L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span style="font-size: 11px; color: #C9A227;">2</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- page head -->
+  <div style="display: flex; flex-direction: column; gap: 14px; padding: 56px 64px 36px; border-bottom: 1px solid #221E15;">
+    <span style="font-size: 11px; color: #6F6857; letter-spacing: 0.06em;">Home &nbsp;/&nbsp; Shop</span>
+    <h1 style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 300; font-size: 50px; margin: 0; letter-spacing: -0.008em;">All rituals</h1>
+    <p style="font-size: 14.5px; color: #8A8272; max-width: 520px; margin: 0; line-height: 1.7; font-weight: 300;">
+      Twelve formulations across face, body, hair and pet care &mdash; each made in small batches and dated on the label.
+    </p>
+  </div>
+
+  <!-- toolbar -->
+  <div style="display: flex; justify-content: space-between; align-items: center; padding: 20px 64px; border-bottom: 1px solid #221E15; background: #100E09;">
+    <div style="display: flex; gap: 10px;">
+      <span style="background: #C9A227; color: #100E09; padding: 9px 20px; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500;">All 12</span>
+      <span style="border: 1px solid #2E2718; color: #A79E8B; padding: 9px 20px; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;">Face 7</span>
+      <span style="border: 1px solid #2E2718; color: #A79E8B; padding: 9px 20px; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;">Body 3</span>
+      <span style="border: 1px solid #2E2718; color: #A79E8B; padding: 9px 20px; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;">Hair 1</span>
+      <span style="border: 1px solid #2E2718; color: #A79E8B; padding: 9px 20px; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;">Pet Care 1</span>
+    </div>
+    <div style="display: flex; gap: 22px; align-items: center; font-size: 11.5px; color: #8A8272; letter-spacing: 0.1em; text-transform: uppercase;">
+      <span>In stock only</span>
+      <span style="display: flex; align-items: center; gap: 8px; border: 1px solid #2E2718; padding: 9px 16px;">
+        Sort: Featured
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 9l6 6 6-6"/></svg>
+      </span>
+    </div>
+  </div>
+
+  <!-- grid -->
+  <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 26px; padding: 44px 64px 80px;">
+
+    <div style="display: flex; flex-direction: column; border: 1px solid #221E15; background: #100E09;">
+      <div style="position: relative; aspect-ratio: 4 / 5; overflow: hidden;">
+        <img src="24k-gold-elixir-face-oil-serum-1.webp" alt="24K Gold Elixir Face Oil Serum" style="width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0.55;">
+        <span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(12,11,8,0.5); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #CFC7B6;">Sold out</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 9px; padding: 20px 20px 22px;">
+        <span style="font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #7E7664;">Face</span>
+        <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; line-height: 1.25;">24K Gold Elixir Face Oil Serum</span>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 6px;">
+          <span style="font-size: 16px; color: #8A8272;">&#8377;1,950</span>
+          <span style="font-size: 10.5px; color: #8A6B5E; letter-spacing: 0.08em;">Notify me</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; border: 1px solid #221E15; background: #100E09;">
+      <div style="position: relative; aspect-ratio: 4 / 5; overflow: hidden;">
+        <img src="24k-gold-glowing-gel-1.webp" alt="24K Gold Glowing Gel" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 9px; padding: 20px 20px 22px;">
+        <span style="font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #7E7664;">Face</span>
+        <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; line-height: 1.25;">24K Gold Glowing Gel</span>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 6px;">
+          <span style="font-size: 16px; color: #F4EFE4;">&#8377;999</span>
+          <span style="font-size: 10.5px; color: #6E7F63; letter-spacing: 0.08em;">In stock &middot; 37</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; border: 1px solid #221E15; background: #100E09;">
+      <div style="position: relative; aspect-ratio: 4 / 5; overflow: hidden;">
+        <img src="intense-brightening-elixir-face-serum-1.webp" alt="Intense Brightening Elixir Face Serum" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        <span style="position: absolute; top: 14px; left: 14px; background: rgba(12,11,8,0.82); color: #C9A227; font-size: 9.5px; letter-spacing: 0.18em; text-transform: uppercase; padding: 5px 10px;">Bestseller</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 9px; padding: 20px 20px 22px;">
+        <span style="font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #7E7664;">Face</span>
+        <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; line-height: 1.25;">Intense Brightening Elixir Face Serum</span>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 6px;">
+          <span style="font-size: 16px; color: #F4EFE4;">&#8377;1,750</span>
+          <span style="font-size: 10.5px; color: #6E7F63; letter-spacing: 0.08em;">In stock &middot; 73</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; border: 1px solid #221E15; background: #100E09;">
+      <div style="position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: #171309; display: flex; align-items: center; justify-content: center;">
+        <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; color: #4E4838; letter-spacing: 0.1em;">Image pending</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 9px; padding: 20px 20px 22px;">
+        <span style="font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #7E7664;">Face</span>
+        <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; line-height: 1.25;">Sunscreen &mdash; Broad Spectrum SPF50</span>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 6px;">
+          <span style="font-size: 16px; color: #F4EFE4;">&#8377;1,850</span>
+          <span style="font-size: 10.5px; color: #9A8A4E; letter-spacing: 0.08em;">Low stock &middot; 9</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; border: 1px solid #221E15; background: #100E09;">
+      <div style="position: relative; aspect-ratio: 4 / 5; overflow: hidden;">
+        <img src="glow-skin-toner-1.webp" alt="Glow Skin Toner" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 9px; padding: 20px 20px 22px;">
+        <span style="font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #7E7664;">Face</span>
+        <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; line-height: 1.25;">Glow Skin Toner</span>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 6px;">
+          <span style="font-size: 16px; color: #F4EFE4;">&#8377;950</span>
+          <span style="font-size: 10.5px; color: #6E7F63; letter-spacing: 0.08em;">In stock &middot; 48</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; border: 1px solid #221E15; background: #100E09;">
+      <div style="position: relative; aspect-ratio: 4 / 5; overflow: hidden;">
+        <img src="tivra-skin-peeling-oil-1.webp" alt="Tivra Skin Peeling Oil" style="width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0.55;">
+        <span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(12,11,8,0.5); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #CFC7B6;">Sold out</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 9px; padding: 20px 20px 22px;">
+        <span style="font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #7E7664;">Face</span>
+        <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; line-height: 1.25;">Tivra Skin Peeling Oil</span>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 6px;">
+          <span style="font-size: 16px; color: #8A8272;">&#8377;1,150</span>
+          <span style="font-size: 10.5px; color: #8A6B5E; letter-spacing: 0.08em;">Notify me</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; border: 1px solid #221E15; background: #100E09;">
+      <div style="position: relative; aspect-ratio: 4 / 5; overflow: hidden;">
+        <img src="intense-body-butter-1.webp" alt="Intense Body Butter" style="width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0.55;">
+        <span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(12,11,8,0.5); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #CFC7B6;">Sold out</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 9px; padding: 20px 20px 22px;">
+        <span style="font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #7E7664;">Body</span>
+        <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; line-height: 1.25;">Intense Body Butter</span>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 6px;">
+          <span style="font-size: 16px; color: #8A8272;">&#8377;1,299</span>
+          <span style="font-size: 10.5px; color: #8A6B5E; letter-spacing: 0.08em;">Notify me</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; border: 1px solid #221E15; background: #100E09;">
+      <div style="position: relative; aspect-ratio: 4 / 5; overflow: hidden;">
+        <img src="rosemary-water-hair-spray-1.webp" alt="Rosemary Water Hair Spray" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 9px; padding: 20px 20px 22px;">
+        <span style="font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #7E7664;">Hair</span>
+        <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; line-height: 1.25;">Rosemary Water Hair Spray</span>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 6px;">
+          <span style="font-size: 16px; color: #F4EFE4;">&#8377;1,490</span>
+          <span style="font-size: 10.5px; color: #6E7F63; letter-spacing: 0.08em;">In stock &middot; 27</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; border: 1px solid #221E15; background: #100E09;">
+      <div style="position: relative; aspect-ratio: 4 / 5; overflow: hidden;">
+        <img src="svastha-medicated-ayurvedic-soap-pack-of-3-1.webp" alt="Svastha Medicated Ayurvedic Soap" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        <span style="position: absolute; top: 14px; left: 14px; background: rgba(12,11,8,0.82); color: #C9A227; font-size: 9.5px; letter-spacing: 0.18em; text-transform: uppercase; padding: 5px 10px;">New</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 9px; padding: 20px 20px 22px;">
+        <span style="font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #7E7664;">Body</span>
+        <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; line-height: 1.25;">Svastha Medicated Soap &mdash; Pack of 3</span>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 6px;">
+          <span style="font-size: 16px; color: #F4EFE4;">&#8377;799</span>
+          <span style="font-size: 10.5px; color: #6E7F63; letter-spacing: 0.08em;">In stock &middot; 27</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; border: 1px solid #221E15; background: #100E09;">
+      <div style="position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: #171309; display: flex; align-items: center; justify-content: center;">
+        <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; color: #4E4838; letter-spacing: 0.1em;">Image pending</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 9px; padding: 20px 20px 22px;">
+        <span style="font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #7E7664;">Body</span>
+        <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; line-height: 1.25;">Cleansing Delight Soap &mdash; Pack of 2</span>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 6px;">
+          <span style="font-size: 16px; color: #F4EFE4;">&#8377;499</span>
+          <span style="font-size: 10.5px; color: #6E7F63; letter-spacing: 0.08em;">In stock &middot; 37</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; border: 1px solid #221E15; background: #100E09;">
+      <div style="position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: #171309; display: flex; align-items: center; justify-content: center;">
+        <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; color: #4E4838; letter-spacing: 0.1em;">Image pending</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 9px; padding: 20px 20px 22px;">
+        <span style="font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #7E7664;">Face</span>
+        <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; line-height: 1.25;">Jeevita Facial Soap &mdash; Pack of 2</span>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 6px;">
+          <span style="font-size: 16px; color: #F4EFE4;">&#8377;499</span>
+          <span style="font-size: 10.5px; color: #6E7F63; letter-spacing: 0.08em;">In stock &middot; 38</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; border: 1px solid #221E15; background: #100E09;">
+      <div style="position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: #171309; display: flex; align-items: center; justify-content: center;">
+        <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; color: #4E4838; letter-spacing: 0.1em;">Image pending</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 9px; padding: 20px 20px 22px;">
+        <span style="font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #7E7664;">Pet Care</span>
+        <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; line-height: 1.25;">Coat Freshening &amp; Deodorizing Mist</span>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 6px;">
+          <span style="font-size: 16px; color: #F4EFE4;">&#8377;460</span>
+          <span style="font-size: 10.5px; color: #6E7F63; letter-spacing: 0.08em;">In stock &middot; 132</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- footer strip -->
+  <div style="display: flex; justify-content: space-between; align-items: center; padding: 30px 64px; border-top: 1px solid #221E15; background: #14120D; font-size: 11px; color: #5F594A; letter-spacing: 0.05em;">
+    <span>&copy; 2026 Advaya Care &middot; Bangalore, India</span>
+    <span>Free shipping over &#8377;1,499 &middot; Domestic &#8377;99 flat</span>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

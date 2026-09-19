@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Jost:wght@300;400;500&display=swap');
+
+/* ==========================================================================
+   ADVAYA CARE — storefront styling for Zoho Commerce
+   Paste into: Online Store > Code Snippets (or Theme Editor > Custom CSS)
+
+   The @import above MUST stay on line 1. A CSS @import is only valid as the
+   first rule in a stylesheet — if anything is placed above it, the fonts
+   silently never load. If your fonts still don't apply, Zoho is wrapping this
+   snippet: move the font loading to a <link> in the head snippet instead.
+
+   Palette and type match the storefront design canvas, so the built site and
+   the mockups stay in agreement.
+   ========================================================================== */
+
+:root {
+  /* Grounds — warm near-blacks, not neutral grey. Brown bias suits the brand. */
+  --adv-bg:            #0C0B08;
+  --adv-surface:       #100E09;
+  --adv-surface-2:     #14120D;
+
+  /* Rules and edges */
+  --adv-line:          #221E15;
+  --adv-line-strong:   #2E2718;
+
+  /* Gold — metallic, matching the logo mark. NOT #FFD700, which reads neon. */
+  --adv-gold:          #C9A227;
+  --adv-gold-light:    #E0C878;
+  --adv-gold-deep:     #8A7B4E;
+
+  /* Text */
+  --adv-ivory:         #F4EFE4;
+  --adv-text:          #CFC7B6;
+  --adv-muted:         #8A8272;
+  --adv-dim:           #6F6857;
+
+  /* Semantic — stock states. Separate from the accent on purpose. */
+  --adv-in-stock:      #6E7F63;
+  --adv-low-stock:     #9A8A4E;
+  --adv-out-stock:     #8A6B5E;
+
+  --adv-serif:         'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --adv-sans:          'Jost', 'Helvetica Neue', system-ui, -apple-system, sans-serif;
+}
+
+/* --------------------------------------------------------------------------
+   1. Ground and base type
+   -------------------------------------------------------------------------- */
+
+html {
+  background-color: var(--adv-bg) !important;
+  color-scheme: dark;
+}
+
+body {
+  background-color: transparent !important;   /* ground lives on <html> so the
+                                                 noise layer below can sit above it */
+  color: var(--adv-text) !important;
+  font-family: var(--adv-sans) !important;
+  font-weight: 300 !important;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Grain. Sits ABOVE the ground and below content — the original put this at
+   z-index:-1 behind an opaque body background, where it could never be seen. */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.35;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.22'/></svg>") repeat;
+}
+
+body > * { position: relative; z-index: 1; }
+
+/* --------------------------------------------------------------------------
+   2. Typography — serif for display, sans for everything else
+   -------------------------------------------------------------------------- */
+
+h1, h2, h3, h4,
+.product-title, .theme-heading, .section-title {
+  font-family: var(--adv-serif) !important;
+  font-weight: 300 !important;
+  color: var(--adv-ivory) !important;       /* ivory, not gold. Gold is an accent,
+                                               and every heading in gold reads cheap. */
+  letter-spacing: -0.005em;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+h1 { font-size: clamp(2.1rem, 4.2vw, 3.2rem) !important; }
+h2 { font-size: clamp(1.7rem, 3vw, 2.4rem) !important; }
+h3 { font-size: 1.3rem !important; }
+h4 { font-size: 1.1rem !important; }
+
+h5, h6 {
+  font-family: var(--adv-sans) !important;
+  font-size: 0.7rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.22em !important;
+  text-transform: uppercase !important;
+  color: var(--adv-gold-deep) !important;    /* eyebrow labels */
+}
+
+p { line-height: 1.7; color: var(--adv-text); }
+
+a { color: var(--adv-gold) !important; text-decoration: none; transition: color 0.25s ease; }
+a:hover { color: var(--adv-gold-light) !important; }
+
+::selection { background: var(--adv-gold); color: var(--adv-bg); }
+
+/* --------------------------------------------------------------------------
+   3. Header and navigation
+   -------------------------------------------------------------------------- */
+
+header, .theme-header, .zs-header, nav {
+  background-color: rgba(12, 11, 8, 0.94) !important;
+  border-bottom: 1px solid var(--adv-line) !important;
+}
+
+.theme-nav a, nav a, .zs-nav-item {
+  color: var(--adv-text) !important;
+  font-size: 0.78rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+}
+
+.theme-nav a:hover, nav a:hover, .zs-nav-item:hover { color: var(--adv-gold) !important; }
+
+/* --------------------------------------------------------------------------
+   4. Buttons — squared and flat. No pill radius, no glow.
+   -------------------------------------------------------------------------- */
+
+.btn-primary, .theme-btn-primary, button[type="submit"],
+.zs-custom-btn, .add-to-cart-btn, .theme-cart-btn {
+  background-color: var(--adv-gold) !important;
+  color: var(--adv-bg) !important;
+  font-family: var(--adv-sans) !important;
+  font-weight: 500 !important;
+  font-size: 0.75rem !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase !important;
+  border: 1px solid var(--adv-gold) !important;
+  border-radius: 2px !important;
+  padding: 15px 34px !important;
+  min-height: 48px !important;              /* touch target */
+  box-shadow: none !important;
+  transition: background-color 0.25s ease, border-color 0.25s ease !important;
+}
+
+.btn-primary:hover, .theme-btn-primary:hover,
+button[type="submit"]:hover, .add-to-cart-btn:hover {
+  background-color: var(--adv-gold-light) !important;
+  border-color: var(--adv-gold-light) !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.btn-secondary, .theme-btn-secondary, .btn-outline {
+  background-color: transparent !important;
+  color: var(--adv-text) !important;
+  border: 1px solid var(--adv-line-strong) !important;
+  border-radius: 2px !important;
+  padding: 14px 30px !important;
+  min-height: 48px !important;
+  font-size: 0.75rem !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase !important;
+  transition: border-color 0.25s ease, color 0.25s ease !important;
+}
+
+.btn-secondary:hover, .btn-outline:hover {
+  border-color: var(--adv-gold) !important;
+  color: var(--adv-gold) !important;
+  background-color: transparent !important;
+}
+
+/* --------------------------------------------------------------------------
+   5. Product cards — hairline edges, no lift, no glow
+   -------------------------------------------------------------------------- */
+
+.product-card, .theme-product-card, .zs-product-card {
+  background-color: var(--adv-surface) !important;
+  border: 1px solid var(--adv-line) !important;
+  border-radius: 2px !important;
+  padding: 0 !important;
+  overflow: hidden;
+  transition: border-color 0.3s ease !important;
+}
+
+.product-card:hover, .theme-product-card:hover, .zs-product-card:hover {
+  border-color: var(--adv-gold-deep) !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.product-card img, .theme-product-card img, .zs-product-card img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+}
+
+.product-title, .theme-product-card .product-title {
+  font-family: var(--adv-serif) !important;
+  font-size: 1.2rem !important;
+  line-height: 1.25 !important;
+  color: var(--adv-ivory) !important;
+}
+
+.product-price, .theme-price {
+  font-family: var(--adv-sans) !important;
+  color: var(--adv-ivory) !important;        /* price in ivory; gold is for the CTA */
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  font-variant-numeric: tabular-nums;
+}
+
+.original-price, .compare-price {
+  color: var(--adv-dim) !important;
+  text-decoration: line-through !important;
+  margin-left: 8px !important;
+  font-size: 0.85rem !important;
+}
+
+/* stock states — semantic colour, deliberately not the gold accent */
+.in-stock    { color: var(--adv-in-stock) !important; }
+.low-stock   { color: var(--adv-low-stock) !important; }
+.out-of-stock{ color: var(--adv-out-stock) !important; }
+
+/* --------------------------------------------------------------------------
+   6. Badges
+   -------------------------------------------------------------------------- */
+
+.gold-badge, .badge-gold {
+  display: inline-block;
+  background: rgba(12, 11, 8, 0.82);
+  border: 1px solid var(--adv-line-strong);
+  color: var(--adv-gold);
+  padding: 5px 12px;
+  border-radius: 2px;
+  font-size: 0.62rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   7. Footer
+   -------------------------------------------------------------------------- */
+
+footer, .theme-footer, .zs-footer {
+  background-color: var(--adv-surface-2) !important;
+  border-top: 1px solid var(--adv-line) !important;
+  color: var(--adv-muted) !important;
+  padding: 64px 0 30px !important;
+}
+
+footer a, .theme-footer a { color: var(--adv-muted) !important; font-size: 0.82rem; }
+footer a:hover, .theme-footer a:hover { color: var(--adv-gold) !important; }
+
+/* --------------------------------------------------------------------------
+   8. Content pages — policies, about, membership
+   -------------------------------------------------------------------------- */
+
+.advaya-policy-container, .advaya-about-container,
+.advaya-faq-container, .advaya-membership-container {
+  max-width: 68ch;                            /* measure, not an arbitrary px width */
+  margin: 56px auto;
+  padding-inline: 20px;
+}
+
+.advaya-policy-container h1, .advaya-about-container h1,
+.advaya-membership-container h1 { margin-bottom: 10px; }
+
+.advaya-policy-container h2 { margin: 40px 0 12px; }
+
+.advaya-policy-container p, .advaya-about-container p {
+  color: var(--adv-text);
+  line-height: 1.75;
+  margin-bottom: 18px;
+  font-size: 0.95rem;
+}
+
+.benefits-grid, .values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1px;
+  background: var(--adv-line);
+  border: 1px solid var(--adv-line);
+  margin-top: 36px;
+}
+
+.benefit-card, .value-item {
+  background: var(--adv-surface);
+  border: 0;
+  border-radius: 0;
+  padding: 28px 24px;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.benefit-card:hover, .value-item:hover { background: var(--adv-surface-2); }
+
+.benefit-card h3, .value-item h3 {
+  font-family: var(--adv-serif) !important;
+  color: var(--adv-ivory) !important;
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
+
+/* --------------------------------------------------------------------------
+   9. Responsive — the original had none
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 900px) {
+  .benefits-grid, .values-grid { grid-template-columns: 1fr; }
+  footer, .theme-footer { padding: 44px 0 24px !important; }
+}
+
+@media (max-width: 560px) {
+  .btn-primary, .theme-btn-primary, .add-to-cart-btn {
+    padding: 14px 22px !important;
+    width: 100%;
+    text-align: center;
+  }
+  .btn-secondary, .btn-outline { padding: 13px 20px !important; width: 100%; text-align: center; }
+  .advaya-policy-container, .advaya-about-container { margin: 32px auto; }
+  .product-title { font-size: 1.05rem !important; }
+}
+
+/* --------------------------------------------------------------------------
+   10. Motion and print
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
+
+@media print {
+  html { background: #fff !important; }
+  body { color: #000 !important; }
+  body::after { display: none; }
+}

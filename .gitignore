@@ -34,3 +34,5 @@ supabase/.temp/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.zoho-token-cache.json
+zoho-import/images/_originals/

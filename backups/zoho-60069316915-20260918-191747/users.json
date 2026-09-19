@@ -1,0 +1,45 @@
+{
+  "code": 0,
+  "message": "success",
+  "users": [
+    {
+      "user_id": "3712772000000032001",
+      "role_id": "3712772000000069002",
+      "name": "Namrata",
+      "email": "namrata@advayacare.com",
+      "mobile": "",
+      "invitation_type": "email",
+      "is_super_admin": false,
+      "user_role": "admin",
+      "status": "active",
+      "is_current_user": true,
+      "photo_url": "https://contacts.zoho.in/file?t=user&ID=60067463602&fs=thumb",
+      "user_type": "zoho",
+      "is_customer_segmented": false,
+      "is_vendor_segmented": false,
+      "roles": [
+        {
+          "role_name": "Admin",
+          "app_source": 6,
+          "access_type": "all",
+          "role_type": "Default",
+          "role_id": "3712772000000069002",
+          "description": "Unrestricted access to all modules.",
+          "is_current_role": true
+        }
+      ],
+      "is_employee": false,
+      "source": ""
+    }
+  ],
+  "page_context": {
+    "page": 1,
+    "per_page": 200,
+    "has_more_page": false,
+    "report_name": "Users",
+    "applied_filter": "Status.All",
+    "custom_fields": [],
+    "sort_column": "name",
+    "sort_order": "A"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "x": 0, "y": 0, "w": 1440, "h": 3290, "title": "Home" },
+    { "file": "Shop.dc.html", "x": 1600, "y": 0, "w": 1440, "h": 2080, "title": "Shop — all rituals" },
+    { "file": "Product.dc.html", "x": 3200, "y": 0, "w": 1440, "h": 1580, "title": "Product detail" },
+    { "file": "Cart.dc.html", "x": 4800, "y": 0, "w": 1440, "h": 990, "title": "Cart" }
+  ],
+  "annotations": [
+    {
+      "id": "brief",
+      "x": 0,
+      "y": -220,
+      "w": 520,
+      "text": "Advaya Care storefront — four key pages.\n\nBuilt on the existing brand: gold on warm near-black, Cormorant Garamond with Jost. Real catalog, real prices, real stock levels from the live store.\n\nFor Zoho Commerce implementation via the Theme Editor."
+    },
+    {
+      "id": "images-note",
+      "x": 1600,
+      "y": -220,
+      "w": 460,
+      "text": "\"Image pending\" cards are the four products with no photography: Sunscreen SPF50, Cleansing Delight Soap, Jeevita Facial Soap, Coat Freshening Mist.\n\nSold-out states shown on the three products currently at zero stock."
+    },
+    {
+      "id": "cart-note",
+      "x": 4800,
+      "y": -220,
+      "w": 420,
+      "text": "Cart shows the MYFIRST 25% coupon and the ₹99 domestic shipping rate already configured in Zoho.\n\nGST shown as included — prices are MRP-inclusive."
+    }
+  ],
+  "launch": { "view": "canvas" }
+}

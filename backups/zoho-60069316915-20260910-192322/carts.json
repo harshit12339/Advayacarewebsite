@@ -1,0 +1,15 @@
+{
+  "code": 0,
+  "message": "success",
+  "carts": [],
+  "page_context": {
+    "page": 1,
+    "per_page": 200,
+    "has_more_page": false,
+    "applied_filter": "LastModifiedDate.Today",
+    "from_date": "2026-09-11",
+    "to_date": "2026-09-11",
+    "sort_column": "last_modified_time",
+    "sort_order": "D"
+  }
+}

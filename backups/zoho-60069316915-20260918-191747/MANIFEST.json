@@ -1,0 +1,33 @@
+{
+  "taken_at": "2026-09-18T19:17:47.681752+00:00",
+  "organization_id": "60069316915",
+  "api_base": "https://commerce.zoho.in/store/api/v1",
+  "resources": {
+    "products": 23,
+    "categories": 6,
+    "collections": 3,
+    "coupons": 1,
+    "customers": 4,
+    "salesorders": 0,
+    "invoices": 3,
+    "packages": 0,
+    "brands": 1,
+    "carts": 0,
+    "users": 1,
+    "organizations": 1,
+    "settings/taxes": 14,
+    "settings/shippingzones": 2,
+    "settings/paymentgateways": 1,
+    "settings/currencies": 12,
+    "settings/emailtemplates": 26,
+    "products (full records)": 23
+  },
+  "errors": {},
+  "not_backed_up": [
+    "Storefront theme and page layouts",
+    "CMS pages (policy pages, about, contact)",
+    "Product image binaries (only metadata is returned by the API)",
+    "SEO and domain settings",
+    "Checkout customisations and code snippets"
+  ]
+}

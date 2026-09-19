@@ -1,0 +1,54 @@
+{
+  "code": 0,
+  "message": "success",
+  "payment_gateways": [
+    {
+      "gateway_id": "3712772000000062031",
+      "gateway_name": "razorpay",
+      "integration_type": "online",
+      "identifier": "acc_ScrR0AZ0UhpQ6h",
+      "additional_field1": "",
+      "additional_field2": "",
+      "additional_field3": "",
+      "additional_field4": "",
+      "additional_field5": "",
+      "password_field1": "",
+      "password_field2": "",
+      "payment_methods": {
+        "upi": true,
+        "wallet": true,
+        "netbanking": true,
+        "debit_card": true,
+        "emi": false,
+        "bank": false,
+        "card": true
+      },
+      "payment_methods_additional_details": [
+        {
+          "name_formatted": "Razorpay",
+          "name": "razorpay",
+          "description": "",
+          "show_in_storefront": true,
+          "is_offline_payment_method": false
+        }
+      ],
+      "deposit_to_account_id": "3712772000000062020",
+      "deposit_to_account_name": "Razorpay Clearing",
+      "currency_code": "",
+      "currency_id": "3712772000000000064",
+      "is_bank_account_associated": "",
+      "is_from_paymentgatewayconnector": false,
+      "is_terminal_supported": false,
+      "state": "",
+      "user_state": "",
+      "is_kyc_completed": "",
+      "is_email_sent": "",
+      "status": "enabled",
+      "razorpay_notification_url": "https://checkout.zoho.in/n/razorpay/7f526e6750472d05c0fd381c93388adb",
+      "gateway_status": "active",
+      "is_razorpay_configured_using_oauth": true,
+      "is_last_modified_gateway": true
+    }
+  ],
+  "allowed_payment_gateways": []
+}

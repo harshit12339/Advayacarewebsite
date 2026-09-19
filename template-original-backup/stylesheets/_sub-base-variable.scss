@@ -1,0 +1,42 @@
+$base_vars : (
+  color-primary :#452F22,
+  color-secondary : #603211,
+  color-default : #ffffff,
+  color-light : #F8F8F8,
+  color-border : rgba(216,203,203,0.44),
+  color-text : #000000,
+  darkbg-color-link : #FCF2E6,
+  color-link:#603211,
+  font-family-heading : unquote("'Marcellus SC',serif"),
+  font-family-base : unquote("'Lora',serif")
+);
+
+@if variable-exists(user_base_vars) {
+  $base_vars : map-merge($base_vars, $user_base_vars);
+}
+
+$default_vars: (
+  color-megamenu-background: rgba(255,0,0,0),
+  font-family-submenu: unquote("'Marcellus SC',serif"),
+  color-submenu-border: rgba(255,255,255,0.8),
+  color-tab-style-two: #7D613A,
+  font-family-megamenu-text: unquote("'Marcellus SC',serif"),
+  font-weight-navigation: 400,
+  font-size-megamenu-text: 16px,
+  font-weight-submenu: 400,
+  color-megamenu-text: #000000,
+  color-submenu: #000000,
+  font-weight-megamenu-text: 400,
+  color-tab-style-two-border: #603211,
+  font-transform-navigation: capitalize,
+  spacing-header-padding-bottom: 16px,
+  font-size-navigation: 16px,
+  color-submenu-hover-background: #FFFFFF,
+  font-family-navigation: unquote("'Marcellus SC',serif"),
+  color-submenu-background: rgba(255,255,255,0.8),
+  spacing-header-padding-top: 16px,
+  color-submenu-hover-active-text: #000000,
+  color-submenu-border-arrow: rgba(0,0,0,0),
+  color-topbar-background: rgba(255,255,255,0),
+  color-navigation: #000000
+);

@@ -1,0 +1,84 @@
+{
+  "code": 0,
+  "message": "success",
+  "collections": [
+    {
+      "collection_id": "3712772000000069318",
+      "name": "Advaya Rituals - Full Size Products",
+      "description": "Our signature full-size collection of handcrafted personal care, created for everyday moments of self-care. From artisan cold-process soaps to hair, body and skincare, every Advaya Ritual is thoughtfully made with natural ingredients, nourishing oils, botanical extracts and beautiful fragrances. <strong>Handcrafted in small batches, consciously created, and designed to turn everyday care into a luxurious ritual.</strong>",
+      "collection_url": "all-products",
+      "sibling_order": 1,
+      "category_id": "",
+      "category_name": "",
+      "status": "active",
+      "type": "smart",
+      "disjunctive": false,
+      "sort_column": "title",
+      "sort_order": "A",
+      "rules": [
+        {
+          "comparator": "greater_than",
+          "field": "price",
+          "index": 1,
+          "display_name": "price",
+          "value": "60"
+        }
+      ],
+      "on_sales": "false",
+      "no_of_items": 0,
+      "image_document_id": "",
+      "image_name": "",
+      "image_type": "",
+      "criteria_string": "1"
+    },
+    {
+      "collection_id": "3712772000000090454",
+      "name": "Advaya Basic Guest Kit",
+      "description": "A thoughtfully curated introduction to Advaya\u2019s handcrafted self-care rituals. Designed for hotels, resorts and hospitality spaces, the Basic Guest Kit brings together essential mini-sized personal care products made with natural ingredients, botanical extracts and nourishing oils. Compact, elegant and easy to use, it adds a touch of conscious luxury to every guest stay.",
+      "collection_url": "advaya-basic-guest-kit",
+      "sibling_order": 1,
+      "category_id": "",
+      "category_name": "",
+      "status": "active",
+      "type": "custom",
+      "disjunctive": false,
+      "sort_column": "",
+      "sort_order": "",
+      "rules": "",
+      "on_sales": "false",
+      "no_of_items": 6,
+      "image_document_id": "",
+      "image_name": "",
+      "image_type": "",
+      "criteria_string": ""
+    },
+    {
+      "collection_id": "3712772000000090524",
+      "name": "Advaya Premium Guest Kit",
+      "description": "<p class=\"PDq2pG_selectionAnchorContainer\">An elevated guest experience featuring a curated selection of Advaya\u2019s handcrafted personal care essentials in premium mini sizes. Thoughtfully formulated with natural ingredients, botanical goodness and rich fragrances, the Premium Guest Kit transforms everyday amenities into a luxurious self-care ritual\u2014leaving guests with an experience worth remembering.<span class=\"PDq2pG_selectionAnchor\"></span></p>\n<h3></h3>",
+      "collection_url": "advaya-premium-guest-kit",
+      "sibling_order": 1,
+      "category_id": "",
+      "category_name": "",
+      "status": "active",
+      "type": "custom",
+      "disjunctive": false,
+      "sort_column": "",
+      "sort_order": "",
+      "rules": "",
+      "on_sales": "false",
+      "no_of_items": 5,
+      "image_document_id": "",
+      "image_name": "",
+      "image_type": "",
+      "criteria_string": ""
+    }
+  ],
+  "page_context": {
+    "page": 1,
+    "per_page": 200,
+    "has_more_page": false,
+    "sort_column": "name",
+    "sort_order": "A"
+  }
+}

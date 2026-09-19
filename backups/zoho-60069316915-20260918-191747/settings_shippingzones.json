@@ -1,0 +1,76 @@
+{
+  "code": 0,
+  "message": "success",
+  "shippingzones": [
+    {
+      "shippingzone_id": "3712772000000070001",
+      "name": "Domestic Shipping",
+      "charge_details": [
+        {
+          "based_on": "order_value",
+          "time_to_deliver": {
+            "hours": "",
+            "minutes": "",
+            "days": ""
+          },
+          "ranges": [
+            {
+              "rate_formatted": "\u20b999.00",
+              "rate": 99.0
+            }
+          ],
+          "ruletype": "flat_rate",
+          "delivery_days": 0,
+          "charge_details": [
+            {
+              "rate_formatted": "\u20b999.00",
+              "rate": 99.0
+            }
+          ],
+          "shippingcharge_id": "3712772000000070300",
+          "delivery_method_id": "",
+          "name": "Standard Shipping",
+          "delivery_title": "3-5 business days",
+          "based_on_new": "order_value",
+          "pricing_scheme": "",
+          "status": false
+        }
+      ]
+    },
+    {
+      "shippingzone_id": "3712772000000070043",
+      "name": "International Shipping",
+      "charge_details": [
+        {
+          "based_on": "order_value",
+          "time_to_deliver": {
+            "hours": "",
+            "minutes": "",
+            "days": ""
+          },
+          "ranges": [
+            {
+              "rate_formatted": "\u20b92,500.00",
+              "rate": 2500.0
+            }
+          ],
+          "ruletype": "flat_rate",
+          "delivery_days": 0,
+          "charge_details": [
+            {
+              "rate_formatted": "\u20b92,500.00",
+              "rate": 2500.0
+            }
+          ],
+          "shippingcharge_id": "3712772000000070303",
+          "delivery_method_id": "",
+          "name": "Standard Shipping",
+          "delivery_title": "10-15 days",
+          "based_on_new": "order_value",
+          "pricing_scheme": "",
+          "status": true
+        }
+      ]
+    }
+  ]
+}

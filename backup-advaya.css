@@ -1,0 +1,218 @@
+/* ==========================================================================
+   ADVAYA CARE LUXURY DARK & GOLD STYLING PACK FOR ZOHO COMMERCE
+   Inject into: Zoho Commerce Dashboard > Site Builder > Settings > Custom CSS / Code Snippet
+   ========================================================================== */
+
+/* 1. Brand Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* 2. Global Root Palette & Typography */
+:root {
+  --advaya-bg: #0b0b0b;
+  --advaya-surface: #141414;
+  --advaya-surface-border: #262626;
+  --advaya-gold: #FFD700;
+  --advaya-gold-muted: #D4AF37;
+  --advaya-gold-dark: #b58b2f;
+  --advaya-text-main: #ffffff;
+  --advaya-text-muted: #a3a3a3;
+  --advaya-font-serif: 'Cormorant Garamond', Georgia, serif;
+  --advaya-font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body, html {
+  background-color: var(--advaya-bg) !important;
+  color: var(--advaya-text-main) !important;
+  font-family: var(--advaya-font-sans) !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Matte noise background overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80'><filter id='noiseFilter'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23noiseFilter)' opacity='0.38'/></svg>") repeat;
+  opacity: 0.12;
+}
+
+/* Headings Typography */
+h1, h2, h3, h4, h5, h6, 
+.product-title, .theme-heading, .section-title {
+  color: var(--advaya-gold-muted) !important;
+  font-family: var(--advaya-font-sans) !important;
+  letter-spacing: -0.01em;
+}
+
+/* 3. Header & Navigation */
+header, .theme-header, .zs-header, nav {
+  background-color: rgba(11, 11, 11, 0.92) !important;
+  backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid var(--advaya-surface-border) !important;
+}
+
+.theme-nav a, nav a, .zs-nav-item {
+  color: #ffffff !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.05em !important;
+  transition: color 0.3s ease !important;
+}
+
+.theme-nav a:hover, nav a:hover {
+  color: var(--advaya-gold) !important;
+}
+
+/* 4. Buttons (Primary Luxury Gold & Outlined) */
+.btn-primary, .theme-btn-primary, button[type="submit"], .zs-custom-btn, .add-to-cart-btn, .theme-cart-btn {
+  background-color: var(--advaya-gold-muted) !important;
+  color: #0b0b0b !important;
+  font-weight: 600 !important;
+  border-radius: 9999px !important;
+  padding: 12px 28px !important;
+  border: 1px solid var(--advaya-gold) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  font-size: 0.82rem !important;
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.25) !important;
+}
+
+.btn-primary:hover, .theme-btn-primary:hover, .add-to-cart-btn:hover {
+  background-color: #e5be3d !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 22px rgba(255, 215, 0, 0.45) !important;
+}
+
+.btn-secondary, .theme-btn-secondary, .btn-outline {
+  background-color: transparent !important;
+  color: var(--advaya-gold) !important;
+  border: 1px solid var(--advaya-gold-muted) !important;
+  border-radius: 9999px !important;
+  padding: 10px 24px !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn-secondary:hover {
+  background-color: var(--advaya-gold-muted) !important;
+  color: #0b0b0b !important;
+}
+
+/* 5. Product Cards & Grid */
+.product-card, .theme-product-card, .zs-product-card {
+  background-color: rgba(20, 20, 20, 0.75) !important;
+  border: 1px solid var(--advaya-surface-border) !important;
+  border-radius: 16px !important;
+  padding: 16px !important;
+  transition: all 0.35s ease !important;
+  backdrop-filter: blur(8px);
+}
+
+.product-card:hover, .theme-product-card:hover, .zs-product-card:hover {
+  border-color: var(--advaya-gold-muted) !important;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 14px 35px rgba(212, 175, 55, 0.18) !important;
+}
+
+.product-price, .theme-price {
+  color: var(--advaya-gold) !important;
+  font-weight: 700 !important;
+  font-size: 1.15rem !important;
+}
+
+.original-price, .compare-price {
+  color: var(--advaya-text-muted) !important;
+  text-decoration: line-through !important;
+  margin-left: 8px !important;
+  font-size: 0.9rem !important;
+}
+
+/* 6. Gold Badge & Floating Glow Effect */
+.gold-badge, .badge-gold {
+  display: inline-block;
+  border: 1px solid var(--advaya-gold);
+  color: var(--advaya-gold);
+  background: rgba(255, 215, 0, 0.08);
+  padding: 4px 14px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* 7. Footer */
+footer, .theme-footer, .zs-footer {
+  background-color: #050505 !important;
+  border-top: 1px solid var(--advaya-surface-border) !important;
+  color: var(--advaya-text-muted) !important;
+  padding-top: 48px !important;
+  padding-bottom: 36px !important;
+}
+
+footer a, .theme-footer a {
+  color: #d1d5db !important;
+  transition: color 0.2s ease !important;
+}
+
+footer a:hover, .theme-footer a:hover {
+  color: var(--advaya-gold) !important;
+}
+
+/* 8. Custom Content Layouts (Policies, Memberships) */
+.advaya-policy-container, .advaya-about-container, .advaya-faq-container, .advaya-membership-container {
+  max-width: 860px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.advaya-policy-container h1, .advaya-about-container h1, .advaya-membership-container h1 {
+  font-size: 2.25rem;
+  margin-bottom: 8px;
+}
+
+.advaya-policy-container h2 {
+  font-size: 1.35rem;
+  margin-top: 28px;
+  margin-bottom: 12px;
+}
+
+.advaya-policy-container p, .advaya-about-container p {
+  color: #e5e5e5;
+  line-height: 1.7;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+}
+
+.benefits-grid, .values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.benefit-card, .value-item {
+  background: #141414;
+  border: 1px solid #262626;
+  border-radius: 14px;
+  padding: 24px;
+  text-align: center;
+}
+
+.benefit-card:hover, .value-item:hover {
+  border-color: var(--advaya-gold-muted);
+}
+
+.benefit-card .icon-circle {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.benefit-card h3, .value-item h3 {
+  color: var(--advaya-gold);
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
